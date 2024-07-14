@@ -665,3 +665,17 @@ footer p {
         gap: 10px; /* Espaçamento entre os itens */
     }
 }
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .descricao-oferta {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .alerta-oferta {
+        width: 30%;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
