@@ -1,0 +1,592 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+/* Estilo para o Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #fff200;
+    color: #000000;
+    margin-top: 0; /* Remova qualquer margem superior */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Seção de Ofertas */
+.ofertas {
+    padding: 0;
+    margin: 0;
+    margin-top: 0px; /* Ajuste negativo para subir a seção de ofertas */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slide-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slide-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 0; /* Remova qualquer margem superior */
+}
+
+.descricao-oferta {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.alerta-oferta {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 140, 0, 0.8); /* Laranja com transparência */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botao-compra {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff8c00; /* Laranja */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.botao-compra:hover {
+    background-color: #e07b00; /* Laranja mais escura no hover */
+}
+/*sção outlet*/
+.outlet {
+    padding: 20px;
+    text-align: center;
+}
+
+.outlet h2 {
+    margin-bottom: 20px;
+}
+
+.outlet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.outlet .produto {
+    position: relative;
+    width: calc(30% - 20px);
+    margin: 10px;
+    padding: 0;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.outlet .produto img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.outlet .produto .ver-produto {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.outlet .produto:hover .ver-produto {
+    opacity: 1; /* Torna o botão visível ao passar o mouse sobre o contêiner .produto */
+}
+/* Efeito para dispositivos móveis */
+@media (hover: none) and (pointer: coarse) {
+    .outlet .produto:hover .ver-produto {
+        opacity: 1;
+    }
+}
+
+/* Seção de Produtos */
+.produtos {
+    padding: 20px;
+    text-align: center;
+}
+
+.produto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.produtos .produto {
+    margin: 10px;
+    text-align: center;
+}
+
+.produtos .produto img {
+    width: 200px;
+    height: auto;
+}
+
+.produtos .ver-mais-btn {
+    display: block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.produtos .ver-mais-btn:hover {
+    background-color: #555;
+}
+
+/* Estilos para a Seção de Redes Sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.redes-info {
+    position: relative; /* Para posicionar o título em relação ao traço */
+    z-index: 2; /* Coloca o título na frente do traço */
+    margin-left: 20px; /* Ajuste o espaçamento do lado esquerdo conforme necessário */
+    left: 200px; /* Ajuste para posicionar o traço mais à esquerda */
+}
+
+.redes-icones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px; /* Ajuste o espaçamento entre o título e os ícones */
+}
+
+.social-icon {
+    display: block;
+}
+
+.redes-imagem {
+    text-align: right;
+}
+
+.redes-imagem img {
+    max-width: 90%;
+    height: auto;
+}
+
+.traço {
+    position: absolute;
+    top: 0;
+    left: -50px; /* Ajuste para posicionar o traço mais à esquerda */
+    width: 4px; /* Largura do traço */
+    height: 400%;
+    background-color: #020202; /* Cor do traço */
+    transform: translateY(-50%);
+    z-index: 1; /* Coloca o traço atrás do título */
+}
+
+/*pafina produtos, produtos*/
+.produtos-page, .outlet-page {
+    margin: 20px;
+}
+
+.produtos-page-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.produto-page-item {
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.produto-page-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.produto-page-item h3 {
+    margin: 10px 0;
+}
+
+.produto-page-item p {
+    margin-bottom: 10px;
+}
+
+.ver-mais-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.ver-mais-btn:hover {
+    background-color: #0056b3;
+}
+
+.outlet-page {
+    margin-top: 40px;
+}
+
+.outlet-page-slides img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+/* Seção de Produtos individual*/
+
+/* Estilo para a seção de imagens do produto */
+.produto-images {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* Estilo para as miniaturas */
+.miniaturas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    left: 500px; /* Ajuste para posicionar o traço mais à esquerda */
+    margin-top: 30px;
+}
+
+.miniatura {
+    width: 70px; /* Largura das miniaturas */
+    height: auto; /* Altura automática para manter proporção */
+    cursor: pointer; /* Cursor para indicar interatividade */
+    transition: transform 0.3s ease; /* Efeito de transição suave */
+    margin-left: 30px; /* Espaço à esquerda de cada miniatura */
+}
+
+/* Estilo para a miniatura ativa */
+.miniatura.active {
+    transform: scale(1.2); /* Aumenta ligeiramente a escala da miniatura ativa */
+}
+
+
+.miniatura:hover {
+    border-color: #333; /* Borda ao passar o mouse */
+}
+
+/* Estilo para a imagem expandida */
+.imagem-expandida {
+    flex: 1;
+    max-width: calc(60% - 60px); /* Largura máxima da imagem expandida */
+    position: relative;
+    left: 50px; /* Ajuste para posicionar o traço mais à esquerda */
+    top: 30px;
+}
+
+.expandida {
+    width: 60%; /* Imagem expandida ocupa toda a largura disponível */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.expandida:hover {
+    transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+.imagem-pequena {
+    width: 50px; /* largura inicial das imagens pequenas */
+    height: auto;
+    cursor: pointer; /* cursor para indicar interatividade */
+    transition: transform 0.3s ease; /* efeito de transição suave */
+}
+
+.imagem-expandida {
+    width: 50%; /* largura expandida */
+    height: auto; /* altura automática para manter proporção */
+}
+/* Estilo geral para a caixa de informações do produto */
+.produto-info-geral {
+    position: relative;
+    padding: 20px;
+    background-color: #f8f8f8;
+    color: #333;
+    border: 1px solid #564c4c19;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: left;
+    margin-top: 20px; /* Espaço entre a imagem e a caixa de informações */
+    right: -700px;
+    top: -400px;
+}
+
+/* Estilo para o título do produto */
+.produto-info-geral h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para os preços */
+.preco-info {
+    margin-bottom: 20px;
+}
+
+.preco-original {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.preco-desconto {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.preco-desconto .desconto {
+    font-size: 16px;
+    color: #1e90ff; /* Cor azul */
+    margin-left: 10px;
+}
+
+.preco-parcela {
+    font-size: 16px;
+    color: #32cd32; /* Cor verde */
+    margin-bottom: 20px;
+}
+
+/* Estilo para a quantidade */
+.quantidade {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.quantidade span {
+    font-size: 14px;
+    color: #666;
+}
+
+.quantidade input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilo para os botões de compra */
+.botoes-compra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comprar-btn, .carrinho-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comprar-btn {
+    background-color: #1e90ff; /* Cor azul */
+    color: #fff;
+}
+
+.comprar-btn:hover {
+    background-color: #1c86ee;
+}
+
+.carrinho-btn {
+    background-color: #ff8c00; /* Cor laranja */
+    color: #fff;
+}
+
+.carrinho-btn:hover {
+    background-color: #ff7f00;
+}
+
+/* Estilo geral para a seção de descrição */
+.descricao {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -250px;
+}
+
+/* Estilo para cada caixa de descrição */
+.descricao-caixa {
+    flex: 1;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 1px solid #00000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    text-align: left;
+}
+
+.descricao-caixa h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.descricao-caixa p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.descricao-caixa ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.descricao-caixa ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 5px;
+}
+
+/* Estilo para o footer */
+
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    margin-right: auto; /* Move o botão para a esquerda */
+}
+
+.back-btn i {
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+
+.back-btn:hover {
+    color: #1e90ff; /* Muda a cor ao passar o mouse */
+}
+
+/* Estilos para o rodapé */
+footer {
+    text-align: center; /* Alinhamento central */
+    padding: 10px; /* Preenchimento interno */
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    margin-top: 20px; /* Espaço acima do rodapé */
+}
+
+/* Estilo para o texto do rodapé */
+footer p {
+    margin: 0; /* Sem margem interna */
+}
+
+/* Estilos adicionais para dispositivos móveis */
+@media (max-width: 768px) {
+    .slide-content {
+        flex-direction: column-reverse;
+    }
+
+    .slide-image {
+        margin-top: 0;
+    }
+
+    .descricao-oferta, .alerta-oferta {
+        position: static;
+        margin-top: 10px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .produto-info-geral, .produtos {
+        margin-top: 10px;
+    }
+
+    .footer-column {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* Reset de margens e paddings */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}

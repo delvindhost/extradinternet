@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <style>
+        /* Estilos do Chatbot */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #chat-container {
+            flex: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .chat-msg {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .bot-msg {
+            background-color: #d4edda;
+            text-align: left;
+        }
+
+        .user-msg {
+            background-color: #cce5ff;
+            text-align: right;
+        }
+
+        #user-input {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #chat-form {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        #chat-form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        .link-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .link-container a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container"></div>
+    <form id="chat-form">
+        <input type="text" id="user-input" placeholder="Digite sua mensagem..." required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const chatForm = document.getElementById("chat-form");
+            const chatContainer = document.getElementById("chat-container");
+            let nomeCliente = "";
+            let emailCliente = "";
+            let problemaProduto = "";
+
+            // Função para adicionar mensagem do chatbot
+            function addBotMessage(message) {
+                const botMsg = document.createElement("div");
+                botMsg.className = "chat-msg bot-msg";
+                botMsg.textContent = message;
+                chatContainer.appendChild(botMsg);
+            }
+
+            // Função para adicionar mensagem do usuário
+            function addUserMessage(message) {
+                const userMsg = document.createElement("div");
+                userMsg.className = "chat-msg user-msg";
+                userMsg.textContent = message;
+                chatContainer.appendChild(userMsg);
+            }
+
+            // Inicialização do chatbot com a primeira mensagem
+            addBotMessage("Olá! Sou um chatbot. Qual é o seu nome?");
+
+            chatForm.addEventListener("submit", function(e) {
+                e.preventDefault();
+                const userInput = document.getElementById("user-input").value.trim();
+
+                // Adiciona a mensagem do usuário no chat
+                addUserMessage(userInput);
+
+                // Lógica do chatbot
+                if (!nomeCliente) {
+                    nomeCliente = userInput;
+                    addBotMessage("Olá, " + nomeCliente + "! Qual é o seu e-mail?");
+                } else if (!emailCliente) {
+                    emailCliente = userInput;
+                    addBotMessage("Você teve problemas com algum produto? Responda com sim ou não.");
+                } else if (!problemaProduto) {
+                    if (userInput.toLowerCase().includes("sim")) {
+                        problemaProduto = "Sim";
+                    } else {
+                        problemaProduto = "Não";
+                    }
+                    addBotMessage("Obrigado! Me conte um pouco mais sobre isso.");
+                } else {
+                    // Última pergunta antes de encerrar a conversa
+                    addBotMessage("Obrigado por compartilhar. Agora vou te encaminhar para um atendente no WhatsApp.");
+
+                    // Cria um link para o WhatsApp
+                    const whatsappLink = document.createElement("a");
+                    whatsappLink.href = "https://wa.me/5545988000647"; // Substitua "seu-numero-de-telefone" pelo número de telefone do atendente
+                    whatsappLink.target = "_blank";
+                    whatsappLink.textContent = "Clique aqui para falar com um atendente no WhatsApp";
+
+                    const whatsappMsg = document.createElement("div");
+                    whatsappMsg.className = "chat-msg bot-msg";
+                    whatsappMsg.appendChild(whatsappLink);
+                    chatContainer.appendChild(whatsappMsg);
+
+                    // Adiciona link para voltar à página inicial
+                    const backLink = document.createElement("a");
+                    backLink.href = "index.html"; // Substitua "index.html" pelo caminho da página inicial
+                    backLink.textContent = "Voltar à Página Inicial";
+
+                    const backLinkContainer = document.createElement("div");
+                    backLinkContainer.className = "link-container";
+                    backLinkContainer.appendChild(whatsappLink);
+                    backLinkContainer.appendChild(backLink);
+
+                    const backLinkMsg = document.createElement("div");
+                    backLinkMsg.className = "chat-msg bot-msg";
+                    backLinkMsg.appendChild(backLinkContainer);
+                    chatContainer.appendChild(backLinkMsg);
+                }
+
+                // Scroll automático para o final do chat
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+
+                // Limpa o campo de entrada
+                document.getElementById("user-input").value = "";
+            });
+        });
+    </script>
+</body>
+</html>
