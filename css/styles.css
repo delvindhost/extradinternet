@@ -668,7 +668,7 @@ footer p {
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     .descricao-oferta {
-        width: 90%;
+        width: 40%;
         margin: 10px auto;
         text-align: center;
     }
