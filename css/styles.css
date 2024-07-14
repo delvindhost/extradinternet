@@ -222,7 +222,12 @@ header nav ul li a:hover {
     gap: 10px;
     margin-top: 10px; /* Ajuste o espaçamento entre o título e os ícones */
 }
-
+.social-icon {
+    display: block;
+    text-indent: 100%; /* Oculta o texto dos links */
+    white-space: nowrap; /* Garante que o texto não seja exibido */
+    overflow: hidden; /* Garante que o texto oculto não cause problemas de layout */
+}
 .social-icon {
     display: block;
 }
@@ -666,16 +671,99 @@ footer p {
     }
 }
 /* Estilos para dispositivos móveis */
+/* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     .descricao-oferta {
-        width: 40%;
-        margin: 10px auto;
-        text-align: center;
+        width: auto; /* Ajusta a largura para caber o botão */
+        margin: 0; /* Remove a margem */
+        text-align: center; /* Centraliza o botão */
+        height: auto; /* Altura ajustável */
+        position: relative; /* Permite ajuste de top e left */
+        left: -90px; /* Ajuste manual */
+        top: -30px; /* Ajuste manual */
+        border: none; /* Remove borda */
+        background: none; /* Remove fundo */
+        padding: 0; /* Remove padding */
+        font-size: 10px;
+    }
+
+    .descricao-oferta h3, .descricao-oferta p {
+        display: none; /* Oculta a descrição do produto */
+    }
+
+    .botao-compra {
+        display: block; /* Garante que o botão de compra seja exibido */
+        margin: auto; /* Centraliza o botão */
     }
 
     .alerta-oferta {
-        width: 30%;
-        margin: 10px auto;
-        text-align: center;
+        width: 15%; /* Largura ajustável */
+        margin: 0; /* Remove a margem */
+        text-align: center; /* Centraliza o texto */
+        height: auto; /* Altura ajustável */
+        position: relative; /* Permite ajuste de top e left */
+        left: 160px; /* Ajuste manual */
+        top: -90px; /* Ajuste manual */
+        font-size: 10px;
     }
+
+    /* Ajuste para remover espaço extra */
+    .ofertas, .outlet {
+        margin: -70px; /* Remove margem */
+        padding: 0px; /* Remove padding */
+        
+    }
+}
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .redes-sociais {
+        display: flex;
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os elementos */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .redes-info {
+        width: 50%; /* Ajusta a largura */
+        margin-bottom: 20px; /* Espaço entre a informação e a imagem */
+        position: relative; /* Permite ajuste de top e left */
+        top: 200px; /* Ajuste manual */
+        left: -90px; /* Ajuste manual */
+    }
+
+    .redes-icones {
+        display: flex;
+        justify-content: center; /* Centraliza os ícones */
+        flex-direction: row; /* Coloca os ícones horizontalmente */
+        flex-wrap: nowrap; /* Não permite quebra de linha */
+        position: relative; /* Permite ajuste de top e left */
+        top: -200px; /* Ajuste manual */
+        left: 80px; /* Ajuste manual */
+    }
+
+    .social-icon {
+        margin: 3px; /* Espaço entre os ícones */
+        position: relative; /* Permite ajuste de top e left */
+        top: 0; /* Ajuste manual */
+        left: 0; /* Ajuste manual */
+    }
+
+    .redes-imagem img {
+        width: 50%; /* Reduz o tamanho da imagem */
+        max-width: 300px; /* Define um tamanho máximo para a imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        position: relative; /* Permite ajuste de top e left */
+        top: 0; /* Ajuste manual */
+        left: 0; /* Ajuste manual */
+    }
+
+    .traço {
+        display: none; /* Opcional: oculta o traço em dispositivos móveis */
+    }
+}
+/* Ajuste para remover espaço extra */
+.produtos, .redes-sociais {
+    margin: -70px; /* Remove margem */
+    padding: 0px; /* Remove padding */
+    
 }
