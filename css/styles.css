@@ -590,3 +590,72 @@ footer p {
     margin: 0;
     padding: 0;
 }
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px; /* Aumenta o padding para melhor espaçamento */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .slide-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .descricao-oferta,
+    .alerta-oferta {
+        position: static;
+        text-align: center;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .produto-info-geral {
+        max-width: 100%;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .outlet .produto {
+        width: calc(50% - 20px);
+    }
+
+    .produtos .produto {
+        width: calc(50% - 20px);
+    }
+
+    .redes-sociais {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .redes-imagem img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .redes-info {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .miniaturas {
+        justify-content: center;
+    }
+
+    .produto-info-geral {
+        padding: 10px;
+    }
+
+    .descricao-caixa {
+        flex: 1 1 100%;
+    }
+}
