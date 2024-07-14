@@ -659,3 +659,9 @@ footer p {
         flex: 1 1 100%;
     }
 }
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: row; /* Exibir horizontalmente */
+        gap: 10px; /* Espaçamento entre os itens */
+    }
+}
