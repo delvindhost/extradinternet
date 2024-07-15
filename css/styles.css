@@ -553,7 +553,7 @@ header nav ul li a:hover {
 footer {
     text-align: center; /* Alinhamento central */
     padding: 10px; /* Preenchimento interno */
-    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    background-color: #f0f0f0; /* Cor de fundo branco */
     margin-top: 20px; /* Espaço acima do rodapé */
 }
 
@@ -561,6 +561,32 @@ footer {
 footer p {
     margin: 0; /* Sem margem interna */
 }
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Garante que o corpo da página tenha pelo menos 100% da altura da tela */
+    }
+
+    main {
+        flex: 1; /* Faz o conteúdo principal (main) ocupar todo o espaço disponível */
+    }
+
+    /* Estilos para o rodapé */
+    footer {
+        text-align: center; /* Alinhamento central */
+        padding: 10px; /* Preenchimento interno */
+        background-color: #f0f0f0; /* Cor de fundo branco */
+        margin-top: 20px; /* Espaço acima do rodapé */
+    }
+
+    /* Estilo para o texto do rodapé */
+    footer p {
+        margin: 0; /* Sem margem interna */
+    }
+}
+
 
 /* Estilos adicionais para dispositivos móveis */
 @media (max-width: 768px) {
@@ -760,3 +786,125 @@ footer p {
         display: none; /* Oculta o traço em dispositivos móveis */
     }
 }
+/* Responsividade para dispositivos móveis pagina produto 1 */
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .produto-images {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .miniaturas {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; /* Scroll suave para iOS */
+        scrollbar-width: none; /* Esconde a barra de rolagem padrão do Firefox */
+        -ms-overflow-style: none; /* Esconde a barra de rolagem padrão do IE e Edge */
+    }
+
+    .miniaturas::-webkit-scrollbar {
+        display: none; /* Esconde a barra de rolagem padrão do Chrome e Safari */
+    }
+
+    .miniatura {
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
+
+    .imagem-expandida {
+        text-align: center;
+        position: relative; /* Permite posicionar elementos internos */
+        width: 1000px; /* Ajuste manual */
+        transition: transform 0.3s ease; /* Adiciona uma transição suave para a transformação */
+}
+
+.imagem-expandida img:hover {
+    transform: scale(1.2); /* Aumenta a imagem em 20% quando o cursor estiver sobre ela */
+
+    }
+
+    .expandida {
+        max-width: 100%;
+        height: auto;
+        border: 2px solid #ffffff;
+    }
+
+    .produto-info-geral, .descricao {
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        margin-top: 20px;
+        position: relative; /* Permite posicionar elementos internos */
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    .descricao-caixa {
+        margin-bottom: 20px;
+        width: 100%; /* Ocupa toda a largura disponível */
+        font-size: 0.775rem; /* Tamanho da fonte reduzido */
+    }
+
+    /* Imagem expandida */
+    .imagem-expandida .expandida {
+        max-width: 150%; /* Ajuste para imagem expandida */
+        height: auto; /* Mantém a proporção da imagem */
+        position: relative; /* Removido posicionamento absoluto */
+        left: 80px;
+        top: -140px;
+        transform: none; /* Remove transformação */
+    }
+
+    /* Informações gerais do produto */
+    .produto-info-geral {
+        position: relative; /* Removido posicionamento absoluto */
+        left: 0;
+        top: 0;
+        transform: none; /* Remove transformação */
+    }
+
+    @media (max-width: 768px) {
+        .produto-info-geral, .descricao {
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            margin-top: 20px;
+            position: relative; /* Permite posicionar elementos internos */
+            width: 100%; /* Ocupa toda a largura disponível */
+        }
+    
+        .descricao-caixa {
+            margin-bottom: 10px; /* Reduz espaço entre as caixas */
+            width: 100%; /* Ocupa toda a largura disponível */
+            font-size: 0.75rem; /* Tamanho da fonte reduzido */
+            padding: 10px; /* Adiciona preenchimento interno */
+        }
+    
+        /* Seção de descrição - Sobre o Produto */
+        .descricao-caixa:nth-child(1) {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    
+        /* Seção de descrição - Características */
+        .descricao-caixa:nth-child(2) {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    
+        /* Seção de descrição - Condições */
+        .descricao-caixa:nth-child(3) {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+    }
+}  
+
