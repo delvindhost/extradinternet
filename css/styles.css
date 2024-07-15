@@ -222,6 +222,7 @@ header nav ul li a:hover {
     gap: 10px;
     margin-top: 10px; /* Ajuste o espaçamento entre o título e os ícones */
 }
+
 .social-icon {
     display: block;
     text-indent: 100%; /* Oculta o texto dos links */
@@ -709,7 +710,7 @@ footer p {
 
     /* Ajuste para remover espaço extra */
     .ofertas, .outlet {
-        margin: -70px; /* Remove margem */
+        margin: 0px; /* Remove margem */
         padding: 0px; /* Remove padding */
         
     }
@@ -720,50 +721,42 @@ footer p {
         display: flex;
         flex-direction: column; /* Empilha os elementos verticalmente */
         align-items: center; /* Centraliza os elementos */
-        text-align: center; /* Centraliza o texto */
+        margin-top: 20px;
     }
 
     .redes-info {
-        width: 50%; /* Ajusta a largura */
-        margin-bottom: 20px; /* Espaço entre a informação e a imagem */
-        position: relative; /* Permite ajuste de top e left */
-        top: 200px; /* Ajuste manual */
-        left: -90px; /* Ajuste manual */
+        margin: 0 auto 20px; /* Margem inferior ajustada */
+        text-align: center; /* Centraliza o texto */
+        top: -20px;
+        left: 05px;
+        font-size: 10px;
     }
 
     .redes-icones {
         display: flex;
         justify-content: center; /* Centraliza os ícones */
-        flex-direction: row; /* Coloca os ícones horizontalmente */
-        flex-wrap: nowrap; /* Não permite quebra de linha */
-        position: relative; /* Permite ajuste de top e left */
-        top: -200px; /* Ajuste manual */
-        left: 80px; /* Ajuste manual */
+        gap: 10px; /* Espaçamento entre os ícones */
+        flex-wrap: wrap; /* Permite quebrar linha se necessário */
     }
 
-    .social-icon {
-        margin: 3px; /* Espaço entre os ícones */
-        position: relative; /* Permite ajuste de top e left */
-        top: 0; /* Ajuste manual */
-        left: 0; /* Ajuste manual */
+    .social-icon img {
+        width: 30px; /* Tamanho ajustável dos ícones */
+        height: 30px;
+    }
+
+    .redes-imagem {
+        text-align: center; /* Centraliza a imagem */
+        margin-top: 20px; /* Espaçamento acima da imagem */
     }
 
     .redes-imagem img {
-        width: 50%; /* Reduz o tamanho da imagem */
-        max-width: 300px; /* Define um tamanho máximo para a imagem */
-        height: auto; /* Mantém a proporção da imagem */
-        position: relative; /* Permite ajuste de top e left */
-        top: 0; /* Ajuste manual */
-        left: 0; /* Ajuste manual */
+        max-width: 100%; /* Tamanho máximo da imagem */
+        height: auto; /* Mantém proporção */
+        display: block; /* Evita espaços em branco */
+        margin: 0 auto; /* Centraliza a imagem */
     }
 
     .traço {
-        display: none; /* Opcional: oculta o traço em dispositivos móveis */
+        display: none; /* Oculta o traço em dispositivos móveis */
     }
-}
-/* Ajuste para remover espaço extra */
-.produtos, .redes-sociais {
-    margin: -70px; /* Remove margem */
-    padding: 0px; /* Remove padding */
-    
 }
