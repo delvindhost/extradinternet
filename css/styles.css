@@ -839,3 +839,10 @@ footer p {
 .back-button:hover {
     background-color: #555; /* Cor de fundo quando hover */
 }
+
+/* Estilo para dispositivos móveis */
+@media (max-width: 768px) {
+    .produto-page-item {
+        flex: 1 1 100%; /* 1 produto por linha */
+    }
+}
