@@ -671,7 +671,7 @@ header nav ul li a:hover {
     }
 
     .miniatura {
-        width: 30px;
+        width: 40px;
         height: auto;
         cursor: pointer;
         border: 2px solid transparent;
@@ -680,7 +680,7 @@ header nav ul li a:hover {
     .imagem-expandida {
         text-align: center;
         position: relative; /* Permite posicionar elementos internos */
-        width: 1000px; /* Ajuste manual */
+        width: 2500px; /* Ajuste manual */
         transition: transform 0.3s ease; /* Adiciona uma transição suave para a transformação */
 }
 
@@ -690,7 +690,7 @@ header nav ul li a:hover {
     }
 
     .expandida {
-        max-width: 100%;
+        max-width: 1000px;
         height: auto;
         border: 2px solid #ffffff;
     }
@@ -713,11 +713,11 @@ header nav ul li a:hover {
 
     /* Imagem expandida */
     .imagem-expandida .expandida {
-        max-width: 150%; /* Ajuste para imagem expandida */
+        max-width: 190px; /* Ajuste para imagem expandida */
         height: auto; /* Mantém a proporção da imagem */
         position: relative; /* Removido posicionamento absoluto */
         left: 80px;
-        top: -140px;
+        top: -50px;
         transform: none; /* Remove transformação */
     }
 
@@ -765,7 +765,7 @@ header nav ul li a:hover {
         .descricao-caixa:nth-child(3) {
             position: relative;
             top: 0;
-            left: 0;
+            left: -12px;
         }
     }
 }  
@@ -800,7 +800,7 @@ footer {
     padding: 10px;
     text-align: center;
     font-size: 14px;
-    width: 105%;
+    width: 100%;
     position: relative;
     bottom: -20px;
 }
