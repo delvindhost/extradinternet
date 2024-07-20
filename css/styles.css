@@ -12,8 +12,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 5px 10px;
-    background-color: #fff200;
-    color: #000000;
+    background-color: #800a0af2;
+    color: #ffffff;
     margin-top: 0; /* Remova qualquer margem superior */
 }
 
@@ -35,7 +35,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -147,7 +147,7 @@ header nav ul li a:hover {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(10, 224, 14, 0.8);
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -191,7 +191,7 @@ header nav ul li a:hover {
     display: block;
     margin-top: 10px;
     color: #fff;
-    background-color: #333;
+    background-color: #0de411;
     padding: 10px;
     text-decoration: none;
     border-radius: 5px;
@@ -199,58 +199,6 @@ header nav ul li a:hover {
 
 .produtos .ver-mais-btn:hover {
     background-color: #555;
-}
-
-/* Estilos para a Seção de Redes Sociais */
-.redes-sociais {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.redes-info {
-    position: relative; /* Para posicionar o título em relação ao traço */
-    z-index: 2; /* Coloca o título na frente do traço */
-    margin-left: 20px; /* Ajuste o espaçamento do lado esquerdo conforme necessário */
-    left: 200px; /* Ajuste para posicionar o traço mais à esquerda */
-}
-
-.redes-icones {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px; /* Ajuste o espaçamento entre o título e os ícones */
-}
-
-.social-icon {
-    display: block;
-    text-indent: 100%; /* Oculta o texto dos links */
-    white-space: nowrap; /* Garante que o texto não seja exibido */
-    overflow: hidden; /* Garante que o texto oculto não cause problemas de layout */
-}
-.social-icon {
-    display: block;
-}
-
-.redes-imagem {
-    text-align: right;
-}
-
-.redes-imagem img {
-    max-width: 90%;
-    height: auto;
-}
-
-.traço {
-    position: absolute;
-    top: 0;
-    left: -50px; /* Ajuste para posicionar o traço mais à esquerda */
-    width: 4px; /* Largura do traço */
-    height: 400%;
-    background-color: #020202; /* Cor do traço */
-    transform: translateY(-50%);
-    z-index: 1; /* Coloca o traço atrás do título */
 }
 
 /*pafina produtos, produtos*/
@@ -292,7 +240,7 @@ header nav ul li a:hover {
 .ver-mais-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #910707;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -300,7 +248,7 @@ header nav ul li a:hover {
 }
 
 .ver-mais-btn:hover {
-    background-color: #0056b3;
+    background-color: #910707;
 }
 
 .outlet-page {
@@ -424,7 +372,7 @@ header nav ul li a:hover {
 
 .preco-desconto .desconto {
     font-size: 16px;
-    color: #1e90ff; /* Cor azul */
+    color: #0008e1; /* Cor azul */
     margin-left: 10px;
 }
 
@@ -501,7 +449,7 @@ header nav ul li a:hover {
     flex: 1;
     padding: 20px;
     background-color: #f8f8f8;
-    border: 1px solid #00000000;
+    border: 1px solid #a2060600;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgb(255, 255, 255);
     text-align: left;
@@ -549,18 +497,6 @@ header nav ul li a:hover {
     color: #1e90ff; /* Muda a cor ao passar o mouse */
 }
 
-/* Estilos para o rodapé */
-footer {
-    text-align: center; /* Alinhamento central */
-    padding: 10px; /* Preenchimento interno */
-    background-color: #f0f0f0; /* Cor de fundo branco */
-    margin-top: 20px; /* Espaço acima do rodapé */
-}
-
-/* Estilo para o texto do rodapé */
-footer p {
-    margin: 0; /* Sem margem interna */
-}
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
     body {
@@ -573,21 +509,7 @@ footer p {
         flex: 1; /* Faz o conteúdo principal (main) ocupar todo o espaço disponível */
     }
 
-    /* Estilos para o rodapé */
-    footer {
-        text-align: center; /* Alinhamento central */
-        padding: 10px; /* Preenchimento interno */
-        background-color: #f0f0f0; /* Cor de fundo branco */
-        margin-top: 20px; /* Espaço acima do rodapé */
-    }
-
-    /* Estilo para o texto do rodapé */
-    footer p {
-        margin: 0; /* Sem margem interna */
-    }
 }
-
-
 /* Estilos adicionais para dispositivos móveis */
 @media (max-width: 768px) {
     .slide-content {
@@ -662,23 +584,6 @@ footer p {
         width: calc(50% - 20px);
     }
 
-    .redes-sociais {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20px;
-    }
-
-    .redes-imagem img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .redes-info {
-        margin-left: 0;
-        text-align: center;
-        margin-top: 10px;
-    }
-
     .miniaturas {
         justify-content: center;
     }
@@ -741,51 +646,8 @@ footer p {
         
     }
 }
-/* Estilos para dispositivos móveis */
-@media (max-width: 768px) {
-    .redes-sociais {
-        display: flex;
-        flex-direction: column; /* Empilha os elementos verticalmente */
-        align-items: center; /* Centraliza os elementos */
-        margin-top: 20px;
-    }
 
-    .redes-info {
-        margin: 0 auto 20px; /* Margem inferior ajustada */
-        text-align: center; /* Centraliza o texto */
-        top: -20px;
-        left: 05px;
-        font-size: 10px;
-    }
 
-    .redes-icones {
-        display: flex;
-        justify-content: center; /* Centraliza os ícones */
-        gap: 10px; /* Espaçamento entre os ícones */
-        flex-wrap: wrap; /* Permite quebrar linha se necessário */
-    }
-
-    .social-icon img {
-        width: 30px; /* Tamanho ajustável dos ícones */
-        height: 30px;
-    }
-
-    .redes-imagem {
-        text-align: center; /* Centraliza a imagem */
-        margin-top: 20px; /* Espaçamento acima da imagem */
-    }
-
-    .redes-imagem img {
-        max-width: 100%; /* Tamanho máximo da imagem */
-        height: auto; /* Mantém proporção */
-        display: block; /* Evita espaços em branco */
-        margin: 0 auto; /* Centraliza a imagem */
-    }
-
-    .traço {
-        display: none; /* Oculta o traço em dispositivos móveis */
-    }
-}
 /* Responsividade para dispositivos móveis pagina produto 1 */
 /* Estilos para dispositivos móveis */
 @media (max-width: 768px) {
@@ -907,4 +769,73 @@ footer p {
         }
     }
 }  
+/* para icones*/
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
 
+.social-icons a {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+/*para o footer*/
+footer {
+    background-color: #800a0af2;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    width: 105%;
+    position: relative;
+    bottom: -20px;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+.back-btn {
+    color: #fff; /* Define a cor do texto como branco */
+    background-color: #800a0af2; /* Cor de fundo original */
+    border: none;
+    padding: 05px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.back-button:hover {
+    background-color: #555; /* Cor de fundo quando hover */
+}

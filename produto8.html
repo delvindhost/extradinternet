@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Loja da Carolina</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="back-btn">&lt; Voltar</a>
+        
+        <h1></h1>
+    </header>
+    
+    <main>
+        <section class="produto">
+            <div class="produto-images">
+                <!-- Miniaturas das imagens -->
+                <div class="miniaturas">
+                    <img src="imagens/produto8.png" alt="Produto 1" class="miniatura" data-img="imagens/produto8.png">
+                    <img src="imagens/produto8.1.png" alt="Produto 2" class="miniatura" data-img="imagens/produto8.1.png">
+                    
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+                <!-- Imagem expandida -->
+                <div class="imagem-expandida">
+                    <img src="imagens/produto8.png" alt="Produto 1" class="expandida">
+                </div>
+            </div>
+            <div class="produto-info-geral">
+                <h2>Power NH</h2>
+                <div class="preco-info">
+                    <p class="preco-original">R$ 300</p>
+                    <p class="preco-desconto">R$ 197 <span class="desconto"> em 12x</span></p>
+                    <p class="preco-parcela">R$ 19,78 sem juros</p>
+                </div>
+                <div class="quantidade">
+                    <span>Quantidade disponível: 10 unidades</span>
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="botoes-compra">
+                    <a href="R$ 197 em 12x
+
+                    R$ 19,78 sem juros" class="comprar-btn">Comprar</a>
+                    <button class="carrinho-btn">Colocar no Carrinho</button>
+                </div>
+            </div>
+            <section class="descricao">
+                <!-- Caixa 1: Sobre o produto -->
+                <div class="descricao-caixa">
+                    <h2>Sobre o Produto</h2>
+                    <p>A fórmula secreta que os milionários utilizam para ter 10x mais foco e produtividade.
+                        Melhora na concentração
+                        Combate ansiedade e estresse
+                        Fornece mais energia
+                        Melhora as funções cognitivas
+                        COMPRAR AGORA</p>
+                </div>
+    
+                <!-- Caixa 2: Características -->
+                <div class="descricao-caixa">
+                    <h2>Características</h2>
+                    <ul>
+                        <li>É por isso que apresentamos a você o Power NH, a solução para suas necessidades cognitivas. O Power NH é uma combinação de ingredientes naturais projetados para melhorar a função cerebral, aumentar o foco e a clareza mental, e promover a energia sustentável.
+                            Com nossa fórmula única, você pode ter a certeza de que está recebendo os melhores ingredientes para ajudar a aprimorar sua cognição e desempenho mental. Além disso, nossos nootrópicos são cuidadosamente formulados para ajudar a reduzir o estresse e a ansiedade, para que você possa se concentrar no que é realmente importante.</li>
+                        <li></li>
+                        <li></li>
+                        <!-- Adicione mais características conforme necessário -->
+                    </ul>
+                </div>
+    
+                <!-- Caixa 3: Condições -->
+                <div class="descricao-caixa">
+                    <h2>Condições</h2>
+                    <p>Melhora na energia
+                        Se sente cansado, indisposto a realizar alguma tarefa importante no seu dia a dia? O Power NH tem o composto certo para te fazer sentir mais disposto a realizar qualquer afazer.
+                        
+                        Aumento da clareza mental:
+                        Seu desempenho cognitivo estará atuando com maior performance promovendo a concentração e memória
+                        
+                        Melhora na qualidade do sono
+                        O magnésio ajuda a melhorar a qualidade do sono, diminuindo o estresse e a ansiedade, enquanto a taurina pode ajudar a regular o ritmo circadiano</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Cookies</a>
+        </div>
+        <p>&copy; 2024 Loja da Carolina. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecionar todas as miniaturas de imagem
+            const miniaturas = document.querySelectorAll('.miniatura');
+            
+            // Selecionar a imagem expandida
+            const expandidaImg = document.querySelector('.imagem-expandida img');
+        
+            // Adicionar evento de clique a cada miniatura de imagem
+            miniaturas.forEach(miniatura => {
+                miniatura.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-img'); // Obtém o atributo data-img da miniatura clicada
+                    expandidaImg.src = imgSrc; // Define o src da imagem expandida com o src da miniatura clicada
+                });
+            });
+        
+            // Botão "Voltar"
+            const backBtn = document.querySelector('.back-btn');
+        
+            backBtn.addEventListener('click', function() {
+                history.back();
+            });
+        });
+    </script>
+</body>
+</html>

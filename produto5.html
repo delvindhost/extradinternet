@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Loja da Carolina</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="back-btn">&lt; Voltar</a>
+        
+        <h1></h1>
+    </header>
+    
+    <main>
+        <section class="produto">
+            <div class="produto-images">
+                <!-- Miniaturas das imagens -->
+                <div class="miniaturas">
+                    <img src="imagens/produto5.png" alt="Produto 1" class="miniatura" data-img="imagens/produto5.png">
+                    <img src="imagens/produto5.1.png" alt="Produto 2" class="miniatura" data-img="imagens/produto5.1.png">
+                    <img src="imagens/produto5.2.png" alt="Produto 3" class="miniatura" data-img="imagens/produto5.2.png">
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+                <!-- Imagem expandida -->
+                <div class="imagem-expandida">
+                    <img src="imagens/produto5.png" alt="Produto 1" class="expandida">
+                </div>
+            </div>
+            <div class="produto-info-geral">
+                <h2>Poli Vitamínica</h2>
+                <div class="preco-info">
+                    <p class="preco-original">R$ 300</p>
+                    <p class="preco-desconto">R$ 119,90<span class="desconto">em 12x</span></p>
+                    <p class="preco-parcela">R$ 12,33 sem juros</p>
+                </div>
+                <div class="quantidade">
+                    <span>Quantidade disponível: 10 unidades</span>
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="botoes-compra">
+                    <a href="https://pay.kiwify.com.br/ubJe8qg?afid=7xsnhIzu" class="comprar-btn">Comprar</a>
+                    <button class="carrinho-btn">Colocar no Carrinho</button>
+                </div>
+            </div>
+            <section class="descricao">
+                <!-- Caixa 1: Sobre o produto -->
+                <div class="descricao-caixa">
+                    <h2>Sobre o Produto</h2>
+                    <p>A fórmula foi desenvolvida pela Biomédica e cosmetologa Izabela Miranda que após sofrer um acidente, perdeu uma boa parte do seu cabelo.
+
+                        Ela tentou vários produtos conhecidos do mercado e nenhum funcionou de fato.
+                        
+                        Foi então que ela começou um estudo frenético para achar uma fórmula que realmente fizesse seu cabelo crescer de volta. E depois de 13 anos de muito estudo ela achou uma fórmula que em pouquíssimo tempo de uso deu um boom muito rápido no crescimento dos seus fios.
+                        
+                        Ao ver o resultado da Iza, as pessoas começaram a pedir para que ela compartilhasse a fórmula que estava usando.
+                        Foi então que ela começou a testar sua fórmula em outras pessoas e todas elas também tiveram resultados extraordinários.
+                        
+                        Iza percebeu que poderia ajudar muitas pessoas que sofrem do mesmo problema que ela sofreu por tantos anos. E foi assim que nasceu o Polivitamínico da Iza. </p>
+                </div>
+    
+                <!-- Caixa 2: Características -->
+                <div class="descricao-caixa">
+                    <h2>Características</h2>
+                    <ul>
+                        <li>As vitaminas são essências para nosso organismo. Inclusive, para fazer com que a queratina do nosso cabelo trabalhe.
+
+                            O sucesso do Poli da Iza é que nele tem os componentes certos e nas medidas certas.
+                            
+                            Ele age na formação do colágeno e da queratina do cabelo, que são os componentes que formam um fio. Por agir na formação do fio, o Poli da Iza faz nascer novos cabelos todos os dias.
+                            
+                            Ele aumenta a produção de matéria prima do cabelo, o que gera a produção de mais fios diariamente.</li>
+                        <li></li>
+                        <li></li>
+                        <!-- Adicione mais características conforme necessário -->
+                    </ul>
+                </div>
+    
+                <!-- Caixa 3: Condições -->
+                <div class="descricao-caixa">
+                    <h2>Condições</h2>
+                    <p>Uma fórmula exclusiva a base de biotina, ela estimula a produção de queratina necessária para saúde dos fios que além de promover a hidratação dos cabelos, tambem mantém a sua pele saudável evitando o ressecamento e mantém a saúde do sistema nervoso
+                        As vitaminas do complexo B Aumentam a circulação do couro cabeludo, o que ajuda a manter a saúde e força dos fios e também ajudam a manter a cor natural dos seus cabelos e previne o envelhecimento dos fios.
+                        A vitamina C contribui para o sistema imunológico, além de dar brilho e deixar os fios mais hidratados.
+                        A vitamina D é responsável por estimular o nascimento de novos fios, e faz o ciclo do crescimento capilar ser saudável.
+                        Os inúmeros aminoácidos presentes contribuem na formação do colágeno, promovendo assim a textura do cabelo e fios mais fortes.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Cookies</a>
+        </div>
+        <p>&copy; 2024 Loja da Carolina. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecionar todas as miniaturas de imagem
+            const miniaturas = document.querySelectorAll('.miniatura');
+            
+            // Selecionar a imagem expandida
+            const expandidaImg = document.querySelector('.imagem-expandida img');
+        
+            // Adicionar evento de clique a cada miniatura de imagem
+            miniaturas.forEach(miniatura => {
+                miniatura.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-img'); // Obtém o atributo data-img da miniatura clicada
+                    expandidaImg.src = imgSrc; // Define o src da imagem expandida com o src da miniatura clicada
+                });
+            });
+        
+            // Botão "Voltar"
+            const backBtn = document.querySelector('.back-btn');
+        
+            backBtn.addEventListener('click', function() {
+                history.back();
+            });
+        });
+    </script>
+</body>
+</html>

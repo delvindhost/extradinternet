@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto - Loja da Carolina</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="back-btn">&lt; Voltar</a>
+        
+        <h1></h1>
+    </header>
+    
+    <main>
+        <section class="produto">
+            <div class="produto-images">
+                <!-- Miniaturas das imagens -->
+                <div class="miniaturas">
+                    <img src="imagens/produto7.png" alt="Produto 1" class="miniatura" data-img="imagens/produto7.png">
+                    <img src="imagens/produto7.1.png" alt="Produto 2" class="miniatura" data-img="imagens/produto7.1.png">
+                    <img src="imagens/produto7.2.png" alt="Produto 3" class="miniatura" data-img="imagens/produto7.2.png">
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+                <!-- Imagem expandida -->
+                <div class="imagem-expandida">
+                    <img src="imagens/produto7.png" alt="Produto 1" class="expandida">
+                </div>
+            </div>
+            <div class="produto-info-geral">
+                <h2>Hair & Skin</h2>
+                <div class="preco-info">
+                    <p class="preco-original">R$ 248,33</p>
+                    <p class="preco-desconto">R$ 149,90 <span class="desconto">60% OFF em 12x</span></p>
+                    <p class="preco-parcela">R$ 15,05 sem juros</p>
+                </div>
+                <div class="quantidade">
+                    <span>Quantidade disponível: 10 unidades</span>
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="botoes-compra">
+                    <a href="https://trendshealth.com.br/?pv=pro673en&af=afinem7n3p" class="comprar-btn">Comprar</a>
+                    <button class="carrinho-btn">Colocar no Carrinho</button>
+                </div>
+            </div>
+            <section class="descricao">
+                <!-- Caixa 1: Sobre o produto -->
+                <div class="descricao-caixa">
+                    <h2>Sobre o Produto</h2>
+                    <p>Revele a beleza natural de sua pele, cabelo e unhas com a Beauty Up!
+                        Você merece sentir-se e parecer incrível todos os dias. Nossas gomas, cuidadosamente formuladas, são mais do que um simples suplemento.
+                        
+                        Elas são a fusão perfeita de sabor e ciência, criadas para nutrir seu corpo e realçar sua beleza natural. Imagine poder combinar o prazer de um doce com os benefícios de um suplemento de alta potência. Agora, você pode!</p>
+                </div>
+    
+                <!-- Caixa 2: Características -->
+                <div class="descricao-caixa">
+                    <h2>Características</h2>
+                    <ul>
+                        <li>Beleza Natural Potencializada:
+                            Com ingredientes naturais e vitaminas essenciais, as gomas ajudam a realçar sua beleza de dentro para fora, proporcionando uma pele mais radiante, cabelos mais volumosos e unhas mais fortes.</li>
+                        <li>Proteção Antioxidante:
+                            Com vitaminas A e C, as gomas oferecem uma defesa robusta contra os danos dos radicais livres, que são uma das principais causas do envelhecimento precoce da pele.</li>
+                        <li>Conveniência e Sabor:
+                            A forma de goma torna a suplementação fácil e agradável. Ao contrário de pílulas ou cápsulas, você terá um momento delicioso com o sabor de morango, tornando mais fácil lembrar de tomar diariamente.</li>
+                        <!-- Adicione mais características conforme necessário -->
+                    </ul>
+                </div>
+    
+                <!-- Caixa 3: Condições -->
+                <div class="descricao-caixa">
+                    <h2>Condições</h2>
+                    <p>Alternativa Saudável para os Doces:
+                        Se você tem um desejo por algo doce, essas gomas são uma alternativa saudável. Elas satisfazem seu paladar enquanto oferecem benefícios reais para sua saúde e beleza, tudo isso com zero calorias.
+                        
+                        
+                        Nutrição Otimizada:
+                        A combinação de vitaminas D, E e complexo B garante que sua pele, cabelo e unhas recebam a nutrição de que precisam para se manterem saudáveis e em seu melhor estado.
+                        
+                        
+                        Compromisso com a Naturalidade:
+                        Sabendo que o produto é composto 100% por ingredientes naturais, você pode ter a tranquilidade de que está escolhendo uma opção segura e livre de aditivos químicos prejudiciais.</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Cookies</a>
+        </div>
+        <p>&copy; 2024 Loja da Carolina. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecionar todas as miniaturas de imagem
+            const miniaturas = document.querySelectorAll('.miniatura');
+            
+            // Selecionar a imagem expandida
+            const expandidaImg = document.querySelector('.imagem-expandida img');
+        
+            // Adicionar evento de clique a cada miniatura de imagem
+            miniaturas.forEach(miniatura => {
+                miniatura.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-img'); // Obtém o atributo data-img da miniatura clicada
+                    expandidaImg.src = imgSrc; // Define o src da imagem expandida com o src da miniatura clicada
+                });
+            });
+        
+            // Botão "Voltar"
+            const backBtn = document.querySelector('.back-btn');
+        
+            backBtn.addEventListener('click', function() {
+                history.back();
+            });
+        });
+    </script>
+</body>
+</html>
