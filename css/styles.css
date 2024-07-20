@@ -611,8 +611,8 @@ header nav ul li a:hover {
         text-align: center; /* Centraliza o botão */
         height: auto; /* Altura ajustável */
         position: relative; /* Permite ajuste de top e left */
-        left: -90px; /* Ajuste manual */
-        top: -30px; /* Ajuste manual */
+        left: -130px; /* Ajuste manual */
+        top: 0px; /* Ajuste manual */
         border: none; /* Remove borda */
         background: none; /* Remove fundo */
         padding: 0; /* Remove padding */
@@ -635,7 +635,7 @@ header nav ul li a:hover {
         height: auto; /* Altura ajustável */
         position: relative; /* Permite ajuste de top e left */
         left: 160px; /* Ajuste manual */
-        top: -90px; /* Ajuste manual */
+        top: -31px; /* Ajuste manual */
         font-size: 10px;
     }
 
