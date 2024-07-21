@@ -635,7 +635,7 @@ header nav ul li a:hover {
         height: auto; /* Altura ajustável */
         position: relative; /* Permite ajuste de top e left */
         left: 160px; /* Ajuste manual */
-        top: -31px; /* Ajuste manual */
+        top: -33px; /* Ajuste manual */
         font-size: 10px;
     }
 
