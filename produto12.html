@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>extradinternet</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="back-btn">&lt; Voltar</a>
+        
+        <h1></h1>
+    </header>
+    
+    <main>
+        <section class="produto">
+            <div class="produto-images">
+                <!-- Miniaturas das imagens -->
+                <div class="miniaturas">
+                    <img src="imagens/produto12.png" alt="Produto 1" class="miniatura" data-img="imagens/produto12.png">
+                    <img src="imagens/produto12.1.png" alt="Produto 2" class="miniatura" data-img="imagens/produto12.1.png">
+                   
+                    <!-- Adicione mais imagens conforme necessário -->
+                </div>
+                <!-- Imagem expandida -->
+                <div class="imagem-expandida">
+                    <img src="imagens/produto12.png" alt="Produto 1" class="expandida">
+                </div>
+            </div>
+            <div class="produto-info-geral">
+                <h2>Meta  Primeira Venda</h2>
+                <div class="preco-info">
+                    <p class="preco-original">R$ 198,90</p>
+                    <p class="preco-desconto">R$ 97,00 <span class="desconto">em 12x</span></p>
+                    <p class="preco-parcela">R$ 9,74 sem juros</p>
+                </div>
+                <div class="quantidade">
+                    <span>Quantidade disponível: 10 unidades</span>
+                    <input type="number" min="1" value="1">
+                </div>
+                <div class="botoes-compra">
+                    <a href="https://milionariocominternet.com/pvg-completa/" class="comprar-btn">Comprar</a>
+                    <button class="carrinho-btn">Colocar no Carrinho</button>
+                </div>
+            </div>
+            <section class="descricao">
+                <!-- Caixa 1: Sobre o produto -->
+                <div class="descricao-caixa">
+                    <h2>Sobre o Produto</h2>
+                    <p>DESCUBRA COMO FAZER SUA PRIMEIRA VENDA COMO AFILIADO EM 24 HORAS...
+                        SEM PRECISAR APARECER, SEM PRECISAR PRODUZIR CONTEÚDO E SEM PRECISAR DE ESTRUTURAS COMPLEXAS!</p>
+                </div>
+    
+                <!-- Caixa 2: Características -->
+                <div class="descricao-caixa">
+                    <h2>Características</h2>
+                    <ul>
+                        <li>Você entenderá o que é um afiliado e terá um rumo quanto aos primeiros passos para sua primeira venda.
+                            Você saberá exatamente quais são os melhores produtos para você vender de forma prática.
+                            Vou te ensinar o passo a passo do zero de como criar a sua primeira campanha de vendas.
+                            Vou te mostrar como otimizar e analisar sua campanha de vendas para melhorar ela cada vez mais.
+                            Você terá acesso vitalício ao método e a todas as atualizações que eu venha a colocar.</li>
+                        
+                        <!-- Adicione mais características conforme necessário -->
+                    </ul>
+                </div>
+    
+                <!-- Caixa 3: Condições -->
+                <div class="descricao-caixa">
+                    <h2>Condições</h2>
+                    <p>Olá, eu sou o João Pedro, trabalho pela internet desde 2010, em 2014 entendi o jogo do Marketing Digital e comecei a vender todos os dias! Eu vou te ensinar exatamente o que faço nos meus negócios para que você possa copiar e criar o seu negócio na internet.
+
+                        Eu faturo 6 dígitos todos os meses desde 2016 e tenho certeza que sabendo as estratégias certas você também pode ter ótimos resultados nesse incrível mercado! Já recebi premiações das maiores plataformas de vendas e palestrei nos maiores eventos do Brasil! E eu quero te ajudar!</p>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos de Uso</a>
+            <a href="#">Política de Cookies</a>
+        </div>
+        <p>&copy; 2024 extradinternet. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selecionar todas as miniaturas de imagem
+            const miniaturas = document.querySelectorAll('.miniatura');
+            
+            // Selecionar a imagem expandida
+            const expandidaImg = document.querySelector('.imagem-expandida img');
+        
+            // Adicionar evento de clique a cada miniatura de imagem
+            miniaturas.forEach(miniatura => {
+                miniatura.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-img'); // Obtém o atributo data-img da miniatura clicada
+                    expandidaImg.src = imgSrc; // Define o src da imagem expandida com o src da miniatura clicada
+                });
+            });
+        
+            // Botão "Voltar"
+            const backBtn = document.querySelector('.back-btn');
+        
+            backBtn.addEventListener('click', function() {
+                history.back();
+            });
+        });
+    </script>
+</body>
+</html>
